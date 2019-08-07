@@ -101,7 +101,6 @@ ontop_fcontext:
     lg 12, 48(15)      # restore R12
     lg 13, 56(15)      # restore R13
     lg 14, 64(15)      # restore R14
-    lg 15, 72(15)      # restore R15
 
     # Restore Floating point registers
     lg   1,80(15)
@@ -127,8 +126,9 @@ ontop_fcontext:
     # R4 --> DATA
 
     # Store the elements to return transfer_t
-    lg 0, 0(2)
-    lg 4, 8(2)
+    stg 0, 0(2)
+    stg 4, 8(2)
+    #stmg 3,4, 0(2)
 
     # Note: The address in R2 points to the place where the return
     # transfer_t is stored. Since context_function take transfer_t
