@@ -36,7 +36,7 @@
 .global jump_fcontext
 .type   jump_fcontext, @function
 
-ontop_fcontext:
+jump_fcontext:
     
     # Reserved the space for stack to store the data of current context
     # before we jump to the new context.
