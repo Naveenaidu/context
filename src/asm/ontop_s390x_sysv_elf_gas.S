@@ -127,8 +127,8 @@ ontop_fcontext:
     # R5 --> Context function
 
     # Store the elements to return transfer_t
-    lg 0, 0(2)
-    lg 4, 8(2)
+    stg 0, 0(2)
+    stg 4, 8(2)
 
     # Note: The address in R2 points to the place where the return
     # transfer_t is stored. Since context_function take transfer_t
